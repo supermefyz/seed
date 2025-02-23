@@ -9,7 +9,7 @@ const block = ref("|")
 const show = ref(false)
 setTimeout(() => {
 const interval = setInterval(() => {
-    percent.value += 10;
+    percent.value += 5;
   block.value+="■"
   if (percent.value === 100) {
       clearInterval(interval);
@@ -55,6 +55,12 @@ const updateShow = () => {
         </div>
     </div>
     <div class="window-body">
+        <div class="menu">
+            <span class="menu-item">日志</span>
+            <span class="menu-item">存档</span>
+            <span class="menu-item">返回主界面</span>
+            <span class="menu-item">缩放</span>
+        </div>
         <div>
             <RouterView/>
         </div>
@@ -69,5 +75,17 @@ const updateShow = () => {
 }
 .window-body{
     user-select: none;
+}
+.menu{
+    height: 1.5rem;
+    font-size: 13px;
+    background-color: white;
+    border-bottom:1px solid #8d8d8d;
+}
+.menu-item:first-child{
+    margin-left:10px;
+}
+.menu-item{
+    border-right: 1px solid #8d8d8d;
 }
 </style>

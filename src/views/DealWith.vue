@@ -9,7 +9,7 @@ const result = ref([
 ])
 </script>
 <template>
-结果页面
+    <h4>结果页面</h4>
 <div class="result">
     <div class="gallery">
         <div class="picture" v-for="item in result" :key="item">
@@ -24,7 +24,7 @@ const result = ref([
     </p>
    </div>
    <button class="btn" @click="$router.back()">上一步</button>
-   <button class="btn" @click="$router.push('/3DModule')">下一步</button>
+   <button class="btn" @click="$router.push('/3DModule')" style="float: right;">下一步</button>
 </div>
 </template>
 <style scoped>
@@ -35,6 +35,7 @@ const result = ref([
     padding-left: 10px;
 }
 .gallery {
+    margin-top:3%;
     width: 99%;
     height: 55%;
 }

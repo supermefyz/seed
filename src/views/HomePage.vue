@@ -10,12 +10,12 @@
         <button type="file" @change="handleFileChange" class="btn ">
             点击上传
         </button>
-        <button class="btn" @click="$router.push('/result')"> 开始处理</button>
+        <button class="btn" @click="$router.push('/result')" style="float: right;"> 开始处理</button>
     </div>
 </template>
 <style>
     .image-container {
-        width: 90%;
+        width: 99%;
         height: 65vh;
         border: 1px solid black;
     }
