@@ -1,10 +1,7 @@
 <script setup>
-import Desktop from '@/components/Desktop.vue'
 </script>
-
 <template>
-  <Desktop/>
+这里是3d模型页面
 </template>
-
 <style scoped>
 </style>
