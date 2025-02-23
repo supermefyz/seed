@@ -2,6 +2,7 @@
 import "xp.css/dist/XP.css";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+
 const router = useRouter();
 const percent = ref(0);
 const block = ref("|")
@@ -65,5 +66,8 @@ const updateShow = () => {
 .window{
     width: 75%;
     margin-left: 10%;
+}
+.window-body{
+    user-select: none;
 }
 </style>
