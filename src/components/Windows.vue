@@ -2,11 +2,12 @@
 import "xp.css/dist/XP.css";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-
+import Dialog from "@/components/Dialog.vue";
 const router = useRouter();
 const percent = ref(0);
 const block = ref("|")
 const show = ref(false)
+const showDialog =ref(false)
 setTimeout(() => {
 const interval = setInterval(() => {
     percent.value += 5;
@@ -24,6 +25,12 @@ const props = defineProps(['show'])
 const emit = defineEmits(['update:show'])
 const updateShow = () => {
     emit('update:show', false)
+}
+const openDialog = () => { 
+    showDialog.value = true
+}
+const closeDialog = () => { 
+    showDialog.value = false
 }
 </script>
 <template>
@@ -56,15 +63,15 @@ const updateShow = () => {
     </div>
     <div class="window-body">
         <div class="menu">
-            <span class="menu-item">日志</span>
+            <span class="menu-item" @click="openDialog">日志</span>
             <span class="menu-item">存档</span>
-            <span class="menu-item">返回主界面</span>
+            <span class="menu-item" @click="$router.push('/home')">返回主界面</span>
             <span class="menu-item">缩放</span>
         </div>
         <div>
             <RouterView/>
+            <Dialog v-show="showDialog" @click="closeDialog" />
         </div>
-        
     </div>
 </div>
 </template>

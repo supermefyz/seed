@@ -6,7 +6,6 @@
 
 </div>
  <button class="btn" @click="$router.back()">上一步</button>
- <button class="btn" @click="$router.push('/home')" style="float: right;">返回首页</button>
 </template>
 <style scoped>
 .container {
