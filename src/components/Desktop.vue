@@ -12,8 +12,8 @@ const param = [
     { name: "我的电脑", img: "cs-display.png" },
     { name: "共享文件", img: "shared folder.png" },
     { name: "回收站", img: "recycle-bin.webp" },
+    {name:"ai助手",img:"ai-assistant.png"},
     { name: "谷子籽粒图像分隔", img: "preferences-system-windows.png" },
-    {name:"ai助手",img:"ai-assistant.png"}
 ]
 setInterval(() => {
     iconShow.value = !iconShow.value
@@ -51,7 +51,7 @@ const selectClear = (id, event) => {
     event.stopPropagation()
 }
 const openWindow = (index,event) => {
-    if (index === 3) {
+    if (index === 4) {
         showWindows.value = true
     }
     selectId.value = null
@@ -100,6 +100,7 @@ const openWindow = (index,event) => {
     .app{
         width: 60px;
         height: 80px;
+        cursor: pointer;
         /* opacity: 0.5; */
         margin-top: 5px;
         margin-left: 5px;
