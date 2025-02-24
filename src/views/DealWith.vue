@@ -30,9 +30,9 @@ const result = ref([
 <style scoped>
 .result {
     width: 100%;
-    height: 70vh;
-    border:1px solid #ccc;
-    padding-left: 10px;
+    height: 66.5vh;
+    /* border:1px solid #ccc; */
+    /* padding-left: 10px; */
 }
 .gallery {
     margin-top:3%;
@@ -52,13 +52,13 @@ const result = ref([
 }
 .text{
     width: 99%;
-    height: 20vh;
+    height: 22vh;
     border:1px solid #ccc;
     font-size: 15px;
     padding: 10px;
 }
 .btn{
-    margin-top: 20px;
-    margin-right:10px;
+    margin-top: 34px;
+    margin-right:5px;
 }
 </style>

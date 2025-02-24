@@ -10,7 +10,7 @@ const show = ref(false)
 setTimeout(() => {
 const interval = setInterval(() => {
     percent.value += 5;
-  block.value+="■"
+  block.value+="■■"
   if (percent.value === 100) {
       clearInterval(interval);
       setTimeout(() => {
@@ -84,8 +84,21 @@ const updateShow = () => {
 }
 .menu-item:first-child{
     margin-left:10px;
+    padding-left:0 ;
 }
 .menu-item{
     border-right: 1px solid #8d8d8d;
+    padding-left: 5px;
+    padding-right:5px;
+    line-height:1.5rem;
+}
+.menu-item:last-child{
+    border-right:none;
+}
+.menu-item:hover{
+    background-color: #f2f2f2;
+}
+.menu-item:active{
+    background-color: #e6e6e6;
 }
 </style>

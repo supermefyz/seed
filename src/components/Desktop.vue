@@ -12,7 +12,8 @@ const param = [
     { name: "我的电脑", img: "cs-display.png" },
     { name: "共享文件", img: "shared folder.png" },
     { name: "回收站", img: "recycle-bin.webp" },
-    { name: "谷子籽粒图像分隔", img: "preferences-system-windows.png" }
+    { name: "谷子籽粒图像分隔", img: "preferences-system-windows.png" },
+    {name:"ai助手",img:"ai-assistant.png"}
 ]
 setInterval(() => {
     iconShow.value = !iconShow.value
@@ -71,8 +72,8 @@ const openWindow = (index,event) => {
                 <div class="app-name">{{ item.name }}</div>
             </div>
         </div>
-        <div class="windows" @click="selectClear(selectId)" @dblclick="screenfull.toggle()">
-            <Windows v-if="showWindows" style="margin-top: 5%;"v-model:show="showWindows"/>
+        <div class="windows" @click="selectClear(selectId)" @dblclick.stop="screenfull.toggle()">
+            <Windows v-if="showWindows" style="margin-top: 3%;"v-model:show="showWindows"/>
         </div>
     <footer>
            <div class="bottom-bar">
